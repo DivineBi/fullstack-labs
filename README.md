@@ -4,4 +4,4 @@ CONTENT
 Labs from IBM courses:  
 HTML, CSS, Docker, Kubernetes
 
-More content will be added as I am completing the course
+More content will be added as I am completing the course.

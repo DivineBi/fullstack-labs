@@ -1,0 +1,63 @@
+Completed on Skills Network
+
+Open New Terminal
+1. Verify kubectl version
+kubectl version
+
+1.1. Create a Kubernetes Service using nginx image
+
+    1.1.1. Create a Deployment named my-deployment1 using nginx image
+    kubectl create deployment my-deployment1 --image=nginx
+
+    1.1.2. Expose the deployment as a service 
+    kubectl expose deployment my-deployment1 --port=80 --type=NodePort --name=my-service1
+
+    1.1.3. Lists all services in the default namespace
+    kubectl get services
+
+1.2. Manage Kubernetes Pods and services
+    1.2.1. Get the list of Pods
+    kubectl get pods
+
+    1.2.2. Show labels
+    kubectl get pod <pod-name> --show-labels
+    kubectl get pod my-deployment1-6586cd4ff5-z25zn  --show-labels
+
+    1.2.3. Label the pod
+    kubectl label pods <pod-name> environment=deployment
+    kubectl label pods my-deployment1-6586cd4ff5-z25zn environment=deployment
+
+    1.2.4. Show labels
+    kubectl get pod <pod-name> --show-labels
+    kubectl get pod my-deployment1-6586cd4ff5-z25zn --show-labels
+
+    1.2.5. Run a test pod using the nginx image
+    kubectl run my-test-pod --image=nginx --restart=Never
+
+    1.2.6. Show logs
+    kubectl logs <pod-name>
+    kubectl logs my-test-pod
+
+1.3. Deploying a StatefulSet
+    1.3.1. Create a file statefulset.yaml
+    touch statefulset.yaml
+
+    1.3.2. Copy code to statefulset.yaml
+
+    1.3.3. Apply the Statefulset configuration
+    kubectl apply -f statefulset.yaml
+
+    1.3.4. Verify that the StatefulSet is created
+    kubectl get statefulsets
+
+1.4. Implementing a DaemonSet
+    1.4.1. Create a file daemonset.yaml
+    touch daemonset.yaml
+
+    1.4.2. Copy code to daemonset.yaml
+
+    1.4.3. Apply the DaemonSet
+    kubectl apply -f daemonset.yaml
+
+    1.4.4. Verify that the DaemonSet has been created
+    kubectl get daemonsets

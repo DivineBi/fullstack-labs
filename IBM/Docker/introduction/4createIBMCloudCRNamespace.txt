@@ -1,0 +1,15 @@
+Create an IBM Cloud Container Registry Namespace
+Pre-requisites
+I logged into IBM Cloud trial account.
+
+IBM Cloud container registry namespaces:
+us.icr.io/<my_namespace>/<my_repo>:<my_tag>
+
+Create a container registry namespace:
+1. Searched for Container Registry in the catalog
+2. Set the location to Dallas
+3. Cliquer sur Espaces de nom
+4. Cliquer sur Créer
+5. Groupe de ressources: Default
+6. Nom: my_coursera_labs
+7. Cliquer sur créer, l'espace de nom est créé

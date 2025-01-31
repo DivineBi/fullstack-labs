@@ -1,0 +1,72 @@
+body {
+    background-color:#f5f5f2 ;
+    font-family: 'Trebuchet MS', 'Gadugi', 'Inria Serif';
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+nav ul {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0;            /* Supprime le retrait interne */
+    margin-bottom: 0.5%;             /* Supprime les marges */
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Couleur par défaut des liens */
+    transition: color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Couleur au survol */
+    cursor: pointer; /* Curseur en main */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 0.25%;
+}
+  
+#apropos {
+    grid-column: 1;
+}
+#competences{
+
+}
+#competences {
+    grid-column: 2; /* Compétences à droite */
+}
+
+#projets {
+    grid-column: span 2; /* Projets sur toute la largeur en dessous */
+}
+
+#recommandations {
+    grid-column: span 2; /* Recommandations sur toute la largeur en dessous */
+}
+
+.grid-item {
+    padding: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    /*background-color:#f9f9f9;*/
+}
+#recommendationBox {
+    width: 40%;
+    height: 10%;
+}
+.input-field {
+    
+    margin-bottom: 10px;
+}
+footer {
+    margin-top: 1%;
+}

@@ -1,0 +1,150 @@
+Lab completed with Skills Network
+Verifiy the environment and command line tools
+1. Open terminal
+
+2. Verify that kubectl CLI is installed
+kubectl version
+
+3. Check the project folder and change if necessary
+
+4. Clone the git repository that contains the artifacts
+[ ! -d 'CC201' ] && git clone https://github.com/ibm-developer-skills-network/CC201.git
+
+5. Change the working directory to CC201/labs/2_IntroKubernetes
+cd CC201/labs/2_IntroKubernetes/
+
+6. List content
+ls
+    Result
+        app.js      hello-world-apply.yaml   package.json
+        Dockerfile  hello-world-create.yaml
+
+Use the kubectl CLI
+    1. Get cluster information
+    kubectl config get-clusters
+        => NAME is returned
+
+    2. View your current context
+    kubectl config get-contexts
+        => returns CURRENT  NAME    CLUSTER     AUTHINFO    NAMESPACE
+
+    3. List all the pods in the NAMESPACE
+    kubectl get pods
+        => returns No resources found in sn-labs-dbingila namespace.
+
+Create a Pod with an imperative command
+    1. Export the namespace as environment variable 
+    export MY_NAMESPACE=sn-labs-$USERNAME
+
+    2. Check the Dockerfile in CC201 > labs > 2_IntroKubernetes
+
+    3. Build and push the image
+    docker build -t us.icr.io/$MY_NAMESPACE/hello-world:1 . && docker push us.icr.io/$MY_NAMESPACE/hello-world:1
+
+    4. Run the hello-world image as a container in Kubernetes
+    kubectl run hello-world --image us.icr.io/$MY_NAMESPACE/hello-world:1 --overrides='{"spec":{"template":{"spec":{"imagePullSecrets":[{"name":"icr"}]}}}}'
+        => returns pod/hello-world created
+
+    5. List the pods in the namespace
+    kubectl get pods
+        => returns  NAME    READY   STATUS  RESTARTS    AGE
+
+        5.1. Specify wide option to get more details about the resource 
+        kubectl get pods -o wide
+        => returns  NAME    READY   STATUS  RESTARTS    AGE     IP      NODE    NOMINATED NODE      READINESS GATES
+
+    6. Describe the Pod to get more details about it.
+    kubectl describe pod hello-world
+        => returns
+            Name:
+            Namespace:
+            Priority:
+            Priority Class Name:
+            Node:
+            Start Time:
+            Labels:
+            Annotations:
+            Status:
+            IP:
+            IPs:
+            Conditions:
+            Volumes:
+            Node-Selectors:
+            Tolerations:
+            Events:
+        
+    7. Delete the pod
+    kubectl delete pod hello-world
+        => returns pod "hello-world" deleted
+
+    8. List to Pods to Verify
+    kubectl get pods
+        => returns No resources found in sn-labs-dbingila namespace.
+
+Create a Pod with imperative object configuration
+    1. Use the explorer to view the configuration file hello-world-create.yaml
+
+    2. Edit the file to insert the namespace where it says <my_namespace>
+
+    3. Imperatively create a Pod using the configuration file
+    kubectl create -f hello-world-create.yaml
+        => returns pod/hello-world created
+
+    4. List the Pods in the namespace
+    kubectl get pods
+
+    5. Delete the Pod
+    kubectl delete pod hello-world
+
+Create a Pod with a declarative command
+    1. Use the explorer to open the file hello-world-apply.yaml
+
+    2. Edit the namespace in hello-world-apply.yaml
+
+    3. Set the configuration as the desired state in Kubernetes
+    kubectl apply -f hello-world-apply.yaml
+        => returns deployment.apps/hello-world created
+
+    4. Ensure that a deployment is created
+    kubectl get deployments
+        => returns  NAME    READY   UP-TO-DATE   AVAILABLE  AGE
+
+    5. List the pods
+    kubectl get pods
+        => the replicaset exists, 3 pods are running
+
+    6. Delete one pod and check
+    kubectl delete pod hello-world-85b6bd7485-fnszf && kubectl get pods
+        => the pod is deleted, 3 pods are running
+
+    7. List the Pods
+    kubectl get pods
+
+Load balancing the application
+    1. To access the application, we have to expose it to the internet
+    kubectl expose deployment/hello-world
+        => returns service/hello-world exposed
+
+    2. List Services
+    kubectl get services
+        => returns NAME     TYPE    CLUSTER-IP   EXTERNAL-IP    PORT(S)     AGE
+
+    3. Open a new terminal using split terminal
+
+    4. We need to create a proxy because the cluster IP is not accessible outside, type the command on the new terminal
+    kubectl proxy
+        => returns Starting to serve on 127.0.0.1:8001
+
+    5. Ping the application in the orginal terminal
+    curl -L localhost:8001/api/v1/namespaces/sn-labs-$USERNAME/services/hello-world/proxy
+        => returns Hello world from hello-world-85b6bd7485-2d9rl! Your app is up and running!
+
+    6. Create 10 different pods and note names for each new pod
+    for i in `seq 10`; do curl -L localhost:8001/api/v1/namespaces/sn-labs-$USERNAME/services/hello-world/proxy; done
+
+    7. Delete Deployment and Service
+    kubectl delete deployment/hello-world service/hello-world
+        => returns deployment.apps "hello-world" deleted
+            service "hello-world" deleted
+
+    8. On the terminal running the proxy command, kill it using ctrl+c

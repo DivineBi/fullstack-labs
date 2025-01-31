@@ -1,0 +1,306 @@
+Console was cleared
+undefined
+console.log("Hello World!")
+VM318:1 Hello World!
+undefined
+let num = 5
+undefined
+var mystr = "John"
+undefined
+console.log(num)
+VM448:1 5
+undefined
+console.log(mystr)
+VM533:1 John
+undefined
+const pi_val = 3.147
+undefined
+console.log(pi_val)
+VM687:1 3.147
+undefined
+function printMyInput(user_input){
+    console.log("The parameter passed is " + user_input)
+}
+undefined
+printMyInput(9)
+VM950:2 The parameter passed is 9
+undefined
+printMyInput("John")
+VM950:2 The parameter passed is John
+undefined
+let printMyInputES6 = (user_input) => {
+    console.log(user_input)
+}
+undefined
+printMyInputES6(9)
+VM1253:2 9
+undefined
+printMyInputES6("John")
+
+VM1253:2 John
+undefined
+
+let printMyInputES6Short = user_input => console.log(user_input)
+undefined
+printMyInputES6Short(9)
+VM1265:2 9
+undefined
+printMyInputES6Short("John")
+
+VM1265:2 John
+undefined
+console.log("5 + 3 = ", 5 + 3)
+console.log("7 - 3 = ", 7 - 3)
+console.log("8 * 2 = ", 8 * 2)
+console.log("27 / 3 = ", 27 / 3)
+console.log("4 to the power of 3 = ", 4 ** 3)
+console.log("19 mod 4 = ", 19 % 4)
+VM1277:1 5 + 3 =  8
+VM1277:2 7 - 3 =  4
+VM1277:3 8 * 2 =  16
+VM1277:4 27 / 3 =  9
+VM1277:5 4 to the power of 3 =  64
+VM1277:6 19 mod 4 =  3
+undefined
+console.log("5 + 3 = ", 5 + 3)
+console.log("5 + \"3\" = ", 5 + "3")
+console.log("5 + 5 + \"3\" = ", 5 + 5 + "3")
+console.log("\"3\" + 5 + 5 = ", "3" + 5 + 5)
+console.log("5 + 5 + \"3\" + 5 = ", 5 + 5 + "3" + 5)
+VM1281:1 5 + 3 =  8
+VM1281:2 5 + "3" =  53
+VM1281:3 5 + 5 + "3" =  103
+VM1281:4 "3" + 5 + 5 =  355
+VM1281:5 5 + 5 + "3" + 5 =  1035
+undefined
+x = 5
+console.log("Old value of x: ", x)
+x += 3
+console.log("New value of x: ", x)
+y = 5
+console.log("Old value of y: ", y)
+y -= 3
+console.log("New value of y: ", y)
+a = 6
+console.log("Old value of a: ", a)
+a *= 3
+console.log("New value of a: ", a)
+b = 6
+console.log("Old value of b: ", b)
+b /= 3
+console.log("New value of b: ", b)
+c = 6
+console.log("Old value of c: ", c)
+c %= 3
+console.log("New value of c: ", c)
+d = 6
+console.log("Old value of d: ", d)
+d **= 3
+console.log("New value of d: ", d)
+VM1285:2 Old value of x:  5
+VM1285:4 New value of x:  8
+VM1285:6 Old value of y:  5
+VM1285:8 New value of y:  2
+VM1285:10 Old value of a:  6
+VM1285:12 New value of a:  18
+VM1285:14 Old value of b:  6
+VM1285:16 New value of b:  2
+VM1285:18 Old value of c:  6
+VM1285:20 New value of c:  0
+VM1285:22 Old value of d:  6
+VM1285:24 New value of d:  216
+undefined
+//Checking equality of 5 (number type) and 5 (string type)
+console.log("5=='5' ", 5=='5')
+console.log("5==='5' ", 5==='5')
+console.log("5===5 ", 5===5)
+console.log("5 != 5 ", 5 !== 5)
+console.log("5 != 6 ", 5 != 6)
+console.log("5 != '5' ", 5 !== '5')
+console.log("5 > 2 ", 5 > 2)
+console.log("5 > 7 ", 5 > 7)
+console.log("5 > 5 ", 5 > 5)
+console.log("5 < 7 ", 5 < 7)
+console.log("5 < 2 ", 5 < 2)
+console.log("5 < 5 ", 5 < 5)
+console.log("5 >= 5 ", 5 >= 5 )
+console.log("5 <= 5 ", 5 <= 5 )
+VM1886:2 5=='5'  true
+VM1886:3 5==='5'  false
+VM1886:4 5===5  true
+VM1886:5 5 != 5  false
+VM1886:6 5 != 6  true
+VM1886:7 5 != '5'  true
+VM1886:8 5 > 2  true
+VM1886:9 5 > 7  false
+VM1886:10 5 > 5  false
+VM1886:11 5 < 7  true
+VM1886:12 5 < 2  false
+VM1886:13 5 < 5  false
+VM1886:14 5 >= 5  true
+VM1886:15 5 <= 5  true
+undefined
+var raining = false
+var cloudy = true
+console.log("It is raining: ", raining)
+console.log("It is cloudy: ", cloudy)
+console.log("It is raining AND cloudy: ", raining && cloudy)
+console.log("It is raining OR cloudy: ", raining || cloudy)
+console.log("It is not raining: ", !raining)
+console.log("It is not cloudy: ", !cloudy)
+VM1891:3 It is raining:  false
+VM1891:4 It is cloudy:  true
+VM1891:5 It is raining AND cloudy:  false
+VM1891:6 It is raining OR cloudy:  true
+VM1891:7 It is not raining:  true
+VM1891:8 It is not cloudy:  false
+undefined
+var chocolate = true
+var candy = false
+console.log("There is chocolate: ", chocolate)
+console.log("There is candy: ", candy)
+console.log("There is candy AND chocolate: ", chocolate && candy, " -- Only candy is evaluated")
+console.log("There is chocolate OR candy: ", chocolate || candy, " -- Only chocolate is evaluated")
+VM1917:3 There is chocolate:  true
+VM1917:4 There is candy:  false
+VM1917:5 There is candy AND chocolate:  false  -- Only candy is evaluated
+VM1917:6 There is chocolate OR candy:  true  -- Only chocolate is evaluated
+undefined
+//Accept a input from the user. If it is a number, print the multiplication table for the number. Else print the input and the length of the input.
+let user_input = prompt('Enter a value');
+//Check if the user did not input anything
+if (!user_input) {
+    console.log("You did not input anything")
+}
+//Check if the user input is not a number
+else if (isNaN(user_input)) {
+    console.log("Your input is ", user_input)
+    console.log("The length of your input is ", user_input.length)
+} 
+//The only option remaining is that the input is a number
+else {
+    console.log(user_input, " X 1 = ", user_input*1)
+    console.log(user_input, " X 2 = ", user_input*2)
+    console.log(user_input, " X 3 = ", user_input*3)
+    console.log(user_input, " X 4 = ", user_input*4)
+    console.log(user_input, " X 5 = ", user_input*5)
+    console.log(user_input, " X 6 = ", user_input*6)
+    console.log(user_input, " X 7 = ", user_input*7)
+    console.log(user_input, " X 8 = ", user_input*8)
+    console.log(user_input, " X 9 = ", user_input*9)
+    console.log(user_input, " X 10 = ", user_input*10)
+}
+
+VM1923:14 7  X 1 =  7
+VM1923:15 7  X 2 =  14
+VM1923:16 7  X 3 =  21
+VM1923:17 7  X 4 =  28
+VM1923:18 7  X 5 =  35
+VM1923:19 7  X 6 =  42
+VM1923:20 7  X 7 =  49
+VM1923:21 7  X 8 =  56
+VM1923:22 7  X 9 =  63
+VM1923:23 7  X 10 =  70
+undefined
+let user_input = prompt('Enter a number between 1 to 7');
+//Using logical OR operator to check if the input is a number and it is between 1 to 7
+if(isNaN(user_input) || user_input< 1 || user_input>7) {
+    console.log("Invalid input")
+} else {
+    user_input = parseInt(user_input)
+    switch(user_input){
+        case 1: console.log("Sunday"); break;
+        case 2: console.log("Monday"); break;
+        case 3: console.log("Tuesday"); break;
+        case 4: console.log("Wednesday"); break;
+        case 5: console.log("Thursday"); break;
+        case 6: console.log("Friday"); break;
+        case 7: console.log("Saturday"); break;
+        default: console.log("Invalid entry");
+    }
+}
+
+
+VM1929:12 Thursday
+undefined
+//Accept a input from the user. If it is a number print the multiplication table for the number. 
+let user_input = prompt('Enter a number');
+//Check if the user input is a number
+if(!isNaN(user_input)) {
+    //Using for loop for the repetitive statement
+    for (let i=0; i<10; i++) {
+        console.log(user_input, " X ", i, " = ", user_input*i)
+    }
+}
+VM1933:7 7  X  0  =  0
+VM1933:7 7  X  1  =  7
+VM1933:7 7  X  2  =  14
+VM1933:7 7  X  3  =  21
+VM1933:7 7  X  4  =  28
+VM1933:7 7  X  5  =  35
+VM1933:7 7  X  6  =  42
+VM1933:7 7  X  7  =  49
+VM1933:7 7  X  8  =  56
+VM1933:7 7  X  9  =  63
+undefined
+//The code below is to find the length of the words the user is entering. The loop will go on and on until the user chooses not to continue by pressing 'n'
+let do_more = true
+while(do_more) {
+    //Accept a input from the user. 
+    let user_input = prompt('Enter a word');
+    //Check if the user input is not a number and then print the length of the input
+    if(isNaN(user_input)) {
+        console.log("Length of the word you entered is " + user_input.length)
+    } else {
+        console.log("You entered a number. Only words are allowed")
+    }
+    let should_continue = prompt("Do you want to continue. Press n to stop")
+    
+    if(should_continue === "n") {
+        do_more = false
+    }
+}
+VM1944:8 Length of the word you entered is 7
+VM1944:8 Length of the word you entered is 3
+VM1944:10 You entered a number. Only words are allowed
+VM1944:10 You entered a number. Only words are allowed
+false
+let myArray = ["Jack","Jill",4,5,true,"John"]
+console.log(myArray[0]);
+console.log(myArray[5]);
+VM1948:2 Jack
+VM1948:3 John
+undefined
+let myArray = ["Jack","Jill",4,5,true,"John"]
+myArray.forEach(element => {
+    console.log(element)
+})
+VM1952:3 Jack
+VM1952:3 Jill
+VM1952:3 4
+VM1952:3 5
+VM1952:3 true
+VM1952:3 John
+undefined
+let myArray = ["Jack","Jill",4,5,true,"John"]
+for (const [index, value] of Object.entries(myArray)) {
+  console.log(index, " - ", value);
+}
+VM1956:3 0  -  Jack
+VM1956:3 1  -  Jill
+VM1956:3 2  -  4
+VM1956:3 3  -  5
+VM1956:3 4  -  true
+VM1956:3 5  -  John
+undefined
+let myMap = new Map();
+//Add a key-value pair to the map, with a key of "name" and a value of "John". 
+myMap.set("name", "John")
+//Add another key-value pair to the map, with a key of "age" and a value of 22.
+myMap.set("age", 22)
+myMap.forEach((val,key) => {
+    console.log(key, " - ", val)
+})
+VM1960:7 name  -  John
+VM1960:7 age  -  22
+undefined

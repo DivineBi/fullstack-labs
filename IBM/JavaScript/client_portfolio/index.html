@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Portfolio de Jean Dupont</title>
+        <!--Portfolio d'un client d'ABC consultant, une société de recrutement-->
+        <link type="text/css" rel="stylesheet" href="./style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        
+        <img src="./abc_logo.jpg" alt="abc consultant" target="_blank"/>
+        <h1>Jean Dupont</h1>
+        <nav>
+            <ul>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">Recommandations</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+        <div id="apropos" class="grid-item">
+            <h2>Mon Profil</h2>
+            <img src="./jeandupont.jpg" alt="Jean Dupont Développeur ABC consultant" />
+            <h3>Jean Dupont</h3>
+            <p>Passionné par la création de solutions logicielles innovantes, je possède 3 années d'expérience dans le développement de logiciels. Expérimenté en Java, Python, JavaScript, j'ai travaillé sur divers projets allant des applications web aux solutions mobiles.</br>              
+                
+                Je suis à la recherche de nouveaux défis et d'opportunités pour innover et améliorer les processus existants. Ma passion pour l'apprentissage continu me pousse à rester à la pointe des technologies émergentes.
+            </p>
+        </div>
+        <div id="competences" class="grid-item">
+            <h2>Expertise</h2>
+            <ul>
+                <li><b>Développement Full Stack</b> : Expérience avec les frameworks front-end et back-end.</li>
+                <li><b>Gestion de Base de Données</b> : Compétences en SQL, NoSQL et optimisation des performances.</li>
+                <li><b>Résolution de Problèmes</b> : Capacité à analyser et résoudre des problèmes complexes rapidement.</li>
+                <li><b>Collaboration et Communication</b> : Aptitude à travailler en équipe et à communiquer efficacement avec les parties prenantes.</li>
+            </ul>
+        </div>
+    
+        <div id="projets" class="grid-item">
+            <h2>Projets</h2>
+            <p>
+                <h3>Application Web de Gestion de Projets</h3>
+
+                <b>Description</b> : Développement d'une application web permettant aux équipes de gérer leurs projets, suivre les tâches, collaborer en temps réel et analyser la progression des travaux.</br>
+
+                <b>Technologies</b> : React (front-end), Node.js(back-end), MongoDB (base de données).</br>
+
+                <b>Objectifs</b> : Améliorer la productivité des équipes, offrir une interface utilisateur intuitive et intégrer des outils de communication internes.</br>
+
+                <h3>Application Mobile de Fitness Personnalisée</h3>
+
+                <b>Description</b> : Création d'une application mobile offrant des programmes de fitness personnalisés, des suivis de nutrition et des conseils de santé en fonction des objectifs de l'utilisateur.</br>
+
+                <b>Technologies</b> : Flutter (développement multiplateforme), Firebase (base de données et authentification), RESTful APIs.</br>
+
+                <b>Objectifs</b> : Aider les utilisateurs à atteindre leurs objectifs de santé, fournir des recommandations basées sur l'analyse des données et intégrer des fonctionnalités de suivi en temps réel.</br>
+
+                <h3>Système de Recommandation de Produits</h3>
+
+                <b>Description</b> : Développement d'un système de recommandation intégré à une plateforme e-commerce pour suggérer des produits aux utilisateurs en fonction de leurs préférences et comportements d'achat.</br>
+
+                <b>Technologies</b> : Python, scikit-learn (machine learning), PostgreSQL (base de données), Django (back-end).</br>
+
+                <b>Objectifs</b> : Augmenter les ventes grâce à des recommandations personnalisées, améliorer l'expérience utilisateur et analyser les tendances d'achat pour optimiser les stratégies de marketing.
+
+            </p>
+        </div>
+        <div id="recommandations" class="grid-item">
+            <h2>Recommandations</h2>
+                <p><em>Travailler avec Jean Dupont a été une expérience exceptionnelle. 
+                    Non seulement il a démontré une compétence technique approfondie, mais il a également apporté une approche collaborative et proactive à chaque projet. </br>
+                    Sa capacité à résoudre des problèmes complexes rapidement et de manière efficace a été un atout précieux pour notre équipe. </br>
+                    Je recommande vivement Jean Dupont pour toute entreprise à la recherche d'un développeur talentueux et passionné. </br>
+                    - <b>Alice Paris, Project Manager chez La Poste</b>
+                </p>
+                <p>J'ai eu le plaisir de collaborer avec Jean Dupont sur plusieurs projets, et je suis constamment impressionné par son engagement envers la qualité et son expertise technique.</br>
+                    Il sait transformer des concepts complexes en solutions fonctionnelles et efficaces. Son attitude positive et sa capacité à travailler sous pression font de lui un atout précieux pour toute équipe. </br>
+                    - <b>Grégoire Versailles, Lead Developer chez Thales</b>
+                </p>
+                <p>En tant que chef de projet, j'ai eu l'opportunité de travailler avec de nombreux développeurs, et Jean Dupont se distingue par son dévouement et son innovation.</br>
+                    Sa capacité à rester à jour avec les dernières technologies et à les intégrer de manière créative dans nos projets a considérablement amélioré notre productivité et notre qualité de travail. Je le recommande vivement. </br>
+                    - <b>Raphael Quentin, Chef de Projet chez IBM</b>
+                    
+                    <span id="recommendationList"></span></em>
+                </p>
+                <input type="text" id="recommendationBox" placeholder="Saisissez une recommandation pour Jean Dupont" class="input-field"></br>
+                <input type="text" id="recommenderName" placeholder="Votre nom" class="input-field">
+                <input type="text" id="recommenderTitle" placeholder="Votre fonction" class="input-field">
+                <input type="text" id="recommenderCompany" placeholder="Votre entreprise" class="input-field"></br>
+                <button onclick="addRecommendation()">Valider</button>
+                
+        </div>
+    </div>
+    
+    
+    </body>
+    <footer>
+        <a href="#"><img src="./home.jpg" alt="portfolio abc consultant" width="4%"/></a>
+    </footer>
+    
+</html>

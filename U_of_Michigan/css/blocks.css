@@ -1,0 +1,41 @@
+
+/* using grids to create blocks */
+
+   body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+.box {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #181616;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* different color for each box */
+#one {
+    border-color: #ffbb10;
+    
+}
+#two {
+    border-color: #354a21;
+}
+
+#three {
+    border-color: yellow;
+}
+
+#four {
+    border-color: blue;
+}
+
+#link {
+    display:flex;
+    justify-content: center;
+}

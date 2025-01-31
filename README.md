@@ -7,6 +7,6 @@ HTML, CSS, Docker, Kubernetes
 More content will be added as I am completing the course.
 
 ## Labs
-- [Conversion](https://divinebi.github.io/fullstack-labs/IBM\JavaScript\conversion/)
-- [Interest Calculator](https://divinebi.github.io/fullstack-labs/IBM\JavaScript\interest_calculator/)
+- [Conversion](https://divinebi.github.io/fullstack-labs/IBM\JavaScript/conversion/)
+- [Interest Calculator](https://divinebi.github.io/fullstack-labs/IBM\JavaScript/interest_calculator/)
 

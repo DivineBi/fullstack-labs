@@ -7,5 +7,5 @@ HTML, CSS, Docker, Kubernetes
 More content will be added as I am completing the course.
 
 ## Labs
-- [Lab 1](https://divinebi.github.io/fullstack-labs/IBM\JavaScript\conversion/)
+- [Conversion](https://divinebi.github.io/fullstack-labs/IBM\JavaScript\conversion/)
 
